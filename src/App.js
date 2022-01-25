@@ -11,10 +11,13 @@ const App = () => {
     const response = await fetch("https://cat-fact.herokuapp.com/facts/random");
     // console.log(response);
 
-    
+
     // JSON Method
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
+    
+    // Display only text 
+    console.log(data.text);
   };
 
   return (
