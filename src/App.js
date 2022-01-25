@@ -6,8 +6,15 @@ const App = () => {
 
   // Method & aSync Await
   const handleFetch = async () => {
+
+    // Request Method
     const response = await fetch("https://cat-fact.herokuapp.com/facts/random");
-    console.log(response);
+    // console.log(response);
+
+    
+    // JSON Method
+    const data = await response.json();
+    console.log(data);
   };
 
   return (
