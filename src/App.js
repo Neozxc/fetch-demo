@@ -1,5 +1,5 @@
 import './index.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // URL: https://cat-fact.herokuapp.com
 
