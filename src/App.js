@@ -8,13 +8,15 @@ const App = () => {
   // State Hook
   const [fact, setFact] = useState({});
 
-  // Hook for useEffect Method
-  const [update, setUpdate] = useState(false);
-
-  // useEffect Method
+  // useEffect Method | equivilant to componentDidMount
   useEffect(() => {
     handleFetch()
   }, []);
+
+  // useEffect Method | equivilant to componentDidUpdate
+  useEffect(() => {
+    console.log("Fact has been updated!")
+  }, [fact]);
 
   // Method & aSync Await
   const handleFetch = async () => {
@@ -38,7 +40,6 @@ const App = () => {
     <div className='container'>
       <h1>Hello API's!</h1>
       <button onClick={handleFetch}>FETCH ME</button>
-      <button onClick={() => setUpdate(!update)}>UPDATE ME</button>
       
       {/* Display the facts with dot notation {fact.text} */}
       <p>{fact.text}</p>
