@@ -28,7 +28,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className='container'>
       <h1>Hello API's!</h1>
       <button onClick={handleFetch}>FETCH ME</button>
       
