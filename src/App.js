@@ -10,13 +10,18 @@ const App = () => {
 
   // useEffect Method | equivilant to componentDidMount
   useEffect(() => {
+    console.log("Fact has changed!")
     handleFetch()
   }, []);
 
-  // useEffect Method | equivilant to componentDidUpdate
   useEffect(() => {
-    console.log("Fact has been updated!")
-  }, [fact]);
+    console.log("Fact has updated!")
+  });
+
+  // useEffect Method | equivilant to componentDidUpdate
+  // useEffect(() => {
+  //   console.log("Fact has been updated!")
+  // }, [fact]);
 
   // Method & aSync Await
   const handleFetch = async () => {
